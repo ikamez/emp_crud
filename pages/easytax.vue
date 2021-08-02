@@ -299,7 +299,7 @@
                         </v-layout>
                       </v-stepper-content>
                       <v-stepper-content step="3">
-                        <v-container>
+                        <!-- <v-container>
                           <v-img
                             class="rounded-border"
                             max-height="350px"
@@ -381,25 +381,91 @@
                               </v-row>
                             </v-container>
                           </v-img>
+                        </v-container> -->
+                        <v-container>
+                          <v-img
+                            class="rounded-border"
+                            max-height="100%"
+                            max-width="100%"
+                            src="/bg.png"
+                          >
+                            <v-col>
+                              <v-layout justify-center align-center>
+                                <v-img
+                                  max-height="100"
+                                  max-width="100"
+                                  src="/done.png"
+                                ></v-img>
+                              </v-layout>
+                            </v-col>
+
+                            <v-container>
+                              <div>
+                                <p>ເລກທີ່ ID EasyTax:</p>
+                              </div>
+                              <v-row>
+                                <v-col cols="12" md="6">
+                                  <div class="border-ldb">
+                                    <h3>
+                                      <span class="blue--text"> LAK </span>
+                                      123
+                                    </h3>
+                                    <h3>Mr. Test</h3>
+                                  </div>
+                                </v-col>
+                              </v-row>
+                              <div>
+                                <p style="margin-bottom: 4px">ເລກບັນຊີອາກອນ:</p>
+                                <h3 class="blue--text">123</h3>
+                              </div>
+
+                              <p style="margin-bottom: 4px">
+                                ຊື່ຫົວໜ່ວຍທຸລະກິດ:
+                              </p>
+                              <p class="blue--text">123</p>
+
+                              <p style="margin-bottom: 4px">ມື້ອອກໃບແຈ້ງ:</p>
+                              <p class="blue--text">123</p>
+
+                              <p style="margin-bottom: 4px">ຊື່ລູກຄ້າ:</p>
+                              <p class="blue--text">123</p>
+
+                              <p style="margin-bottom: 4px">ສະກຸນເງິນ:</p>
+                              <p class="blue--text">123</p>
+
+                              <p style="margin-bottom: 4px">ຈຳນວນເງິນ</p>
+                              <h3 class="blue--text">123 LAK</h3>
+                              <p style="margin-bottom: 4px">ມອບເຂົ້າບັນຊີ</p>
+                              <h3 class="blue--text">123 LAK</h3>
+                              <p style="margin-bottom: 4px">ຊື່ບັນຊີ</p>
+                              <h3 class="blue--text">123 LAK</h3>
+                              <br />
+                              <p style="margin-bottom: 4px">ເນື້ອໃນ:</p>
+                              <p class="blue--text">123</p>
+                            </v-container>
+                          </v-img>
                         </v-container>
                         <v-layout justify-center="justify-center">
                           <v-flex class="text-md-center">
                             <v-row no-gutters>
                               <v-col xs="2">
                                 <v-btn
-                                  @click="e1 = 2"
                                   color="blue-grey"
                                   class="ma-2 white--text"
                                 >
-                                  <v-icon>mdi-chevron-left</v-icon>
-                                  ກັບຄືນ
+                                  Print Bill
+                                  <v-icon right dark> mdi-printer </v-icon>
                                 </v-btn>
                               </v-col>
                               <v-col md="8" xs="8"></v-col>
                               <v-col xs="2">
-                                <v-btn color="primary" @click="e1 = 4">
-                                  ດຳເນີນການຕໍ່
-                                  <v-icon>mdi-chevron-right</v-icon>
+                                <v-btn
+                                  color="red"
+                                  class="ma-2 white--text"
+                                  @click="$router.push('/services')"
+                                >
+                                  ປິດ
+                                  <v-icon>mdi-close</v-icon>
                                 </v-btn>
                               </v-col>
                             </v-row>
@@ -454,5 +520,12 @@ export default {
 <style scoped>
 .rounded-border {
   border-radius: 20px;
+}
+.border-ldb {
+  padding: 15px;
+  border-style: solid;
+  border-color: #7a7a7a;
+  border-width: thin;
+  border-radius: 5px;
 }
 </style>
