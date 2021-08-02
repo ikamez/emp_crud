@@ -171,7 +171,6 @@
                                 name="input-7-4"
                                 label="ເນື້ອໃນ"
                                 required
-                                :rules="detailRules"
                               ></v-textarea>
                             </v-col>
                           </v-card>

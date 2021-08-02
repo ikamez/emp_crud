@@ -29,7 +29,8 @@
                       <v-stepper-step step="3"> ສຳເລັດ </v-stepper-step>
                     </v-stepper-header>
                     <v-stepper-items>
-                      <v-stepper-content step="1"><br/>
+                      <v-stepper-content step="1"
+                        ><br />
                         <v-row>
                           <v-col cols="12">
                             <v-select
@@ -163,12 +164,8 @@
                             </v-col>
                           </v-card>
                         </v-container>
-                        <v-btn
-                          color="primary"
-                          @click="e1 = 2"
-                          :disabled="!valid"
-                        >
-                          ດຳເນີນການຕໍ່
+                        <v-btn color="primary" @click="e1 = 2">
+                          ດຳເນີນການຕໍ່ <v-icon>mdi-chevron-right</v-icon>
                         </v-btn>
                       </v-stepper-content>
                       <v-stepper-content step="2">
@@ -277,12 +274,29 @@
                             </v-col>
                           </v-card>
                         </v-container>
-                        <v-btn color="grey darken-3" dark @click="e1 = 1"
-                          >ກັບຄືນ</v-btn
-                        >
-                        <v-btn color="primary" @click="e1 = 3">
-                          ຢືນຍັນການຊຳລະ
-                        </v-btn>
+                        <v-layout justify-center="justify-center">
+                          <v-flex class="text-md-center">
+                            <v-row no-gutters>
+                              <v-col xs="2">
+                                <v-btn
+                                  @click="e1 = 1"
+                                  color="blue-grey"
+                                  class="ma-2 white--text"
+                                >
+                                  <v-icon>mdi-chevron-left</v-icon>
+                                  ກັບຄືນ
+                                </v-btn>
+                              </v-col>
+                              <v-col md="8" xs="8"></v-col>
+                              <v-col xs="2">
+                                <v-btn color="primary" @click="e1 = 3">
+                                  ດຳເນີນການຕໍ່
+                                  <v-icon>mdi-chevron-right</v-icon>
+                                </v-btn>
+                              </v-col>
+                            </v-row>
+                          </v-flex>
+                        </v-layout>
                       </v-stepper-content>
                       <v-stepper-content step="3">
                         <v-container>
@@ -368,16 +382,29 @@
                             </v-container>
                           </v-img>
                         </v-container>
-
-                        <v-btn
-                          color="grey darken-3"
-                          dark
-                          @click="$router.push('/services')"
-                          >ປິດ</v-btn
-                        >
-                        <v-btn color="primary" nuxt to="easytaxbill">
-                          ພິມໃບບິນ
-                        </v-btn>
+                        <v-layout justify-center="justify-center">
+                          <v-flex class="text-md-center">
+                            <v-row no-gutters>
+                              <v-col xs="2">
+                                <v-btn
+                                  @click="e1 = 2"
+                                  color="blue-grey"
+                                  class="ma-2 white--text"
+                                >
+                                  <v-icon>mdi-chevron-left</v-icon>
+                                  ກັບຄືນ
+                                </v-btn>
+                              </v-col>
+                              <v-col md="8" xs="8"></v-col>
+                              <v-col xs="2">
+                                <v-btn color="primary" @click="e1 = 4">
+                                  ດຳເນີນການຕໍ່
+                                  <v-icon>mdi-chevron-right</v-icon>
+                                </v-btn>
+                              </v-col>
+                            </v-row>
+                          </v-flex>
+                        </v-layout>
                       </v-stepper-content>
                     </v-stepper-items>
                   </v-stepper>
