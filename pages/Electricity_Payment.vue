@@ -256,7 +256,7 @@
                               <v-col md="8" xs="8"></v-col>
                               <v-col xs="2">
                                 <v-btn color="primary" @click="e1 = 4">
-                                  ດຳເນີນການຕໍ່
+                                  ຢືນຍັນນການຊຳລະ
                                   <v-icon>mdi-chevron-right</v-icon>
                                 </v-btn>
                               </v-col>

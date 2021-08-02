@@ -170,110 +170,49 @@
                       </v-stepper-content>
                       <v-stepper-content step="2">
                         <v-container>
-                          <v-card class="mb-12">
-                            <v-col> <h3>ລາຍລະອຽດຂໍ້ມູນ:</h3></v-col>
-                            <v-col>
-                              <v-divider />
-                            </v-col>
-                            <v-row no-gutters>
-                              <v-col cols="12" sm="2">
-                                <v-card class="pa-2" flat>
-                                  ເລກທີ່ ID EasyTax:
-                                </v-card>
-                              </v-col>
-                              <v-col cols="12" sm="2">
-                                <v-card class="pa-2" flat>
-                                  <h3><b>123</b></h3>
-                                </v-card>
-                              </v-col>
-                              <v-col cols="12" sm="2">
-                                <v-card class="pa-2" flat>
-                                  ເລກບັນຊີອາກອນ:
-                                </v-card>
-                              </v-col>
-                              <v-col cols="12" sm="2">
-                                <v-card class="pa-2" flat>
-                                  <h3><b>234</b></h3>
-                                </v-card>
-                              </v-col>
-                              <v-col cols="12" sm="2">
-                                <v-card class="pa-2" flat>
-                                  ຊື່ຫົວໜ່ວຍທຸລະກິດ:
-                                </v-card>
-                              </v-col>
-                              <v-col cols="12" sm="2">
-                                <v-card class="pa-2" flat>
-                                  <h3><b>Ex Company</b></h3>
-                                </v-card>
-                              </v-col>
-                            </v-row>
-                            <v-col>
-                              <v-divider />
-                            </v-col>
-                            <v-row no-gutters>
-                              <v-col cols="12" sm="2">
-                                <v-card class="pa-2" flat>
-                                  ມື້ອອກໃບແຈ້ງ:
-                                </v-card>
-                              </v-col>
-                              <v-col cols="12" sm="2">
-                                <v-card class="pa-2" flat>
-                                  <h3><b>16-7-21</b></h3>
-                                </v-card>
-                              </v-col>
-                              <v-col cols="12" sm="2">
-                                <v-card class="pa-2" flat> ສະກຸນເງິນ: </v-card>
-                              </v-col>
-                              <v-col cols="12" sm="2">
-                                <v-card class="pa-2" flat>
-                                  <h3><b>LAK</b></h3>
-                                </v-card>
-                              </v-col>
-                              <v-col cols="12" sm="2">
-                                <v-card class="pa-2" flat> ຈຳນວນເງິນ: </v-card>
-                              </v-col>
-                              <v-col cols="12" sm="2">
-                                <v-card class="pa-2" flat>
-                                  <h3><b>25.000</b></h3>
-                                </v-card>
-                              </v-col>
-                            </v-row>
-                            <v-col>
-                              <v-divider />
-                            </v-col>
-                            <v-row no-gutters>
-                              <v-col cols="12" sm="2">
-                                <v-card class="pa-2" flat>
-                                  ມອບເຂົ້າບັນຊີ:
-                                </v-card>
-                              </v-col>
-                              <v-col cols="12" sm="2">
-                                <v-card class="pa-2" flat>
-                                  <h3><b>1234567889</b></h3>
-                                </v-card>
-                              </v-col>
-                              <v-col cols="12" sm="2">
-                                <v-card class="pa-2" flat> ຊື່ບັນຊີ: </v-card>
-                              </v-col>
-                              <v-col cols="12" sm="2">
-                                <v-card class="pa-2" flat>
-                                  <h3><b>Account 1</b></h3>
-                                </v-card>
-                              </v-col>
-                              <v-col cols="12" sm="2">
-                                <v-card class="pa-2" flat> ເນື້ອໃນ: </v-card>
-                              </v-col>
-                              <v-col cols="12" sm="2">
-                                <v-card class="pa-2" flat>
-                                  <h3><b>ກຂຄງ</b></h3>
-                                </v-card>
-                              </v-col>
-                            </v-row>
-                            <v-col>
-                              <v-divider />
-                            </v-col>
-                          </v-card>
-                        </v-container>
+                              <div>
+                                <p>ເລກທີ່ ID EasyTax:</p>
+                              </div>
+                              <v-row>
+                                <v-col cols="12" md="6">
+                                  <div class="border-ldb">
+                                    <h3>
+                                      <span class="blue--text"> LAK </span>
+                                      123
+                                    </h3>
+                                    <h3>Mr. Test</h3>
+                                  </div>
+                                </v-col>
+                              </v-row>
+                              <div>
+                                <p style="margin-bottom: 4px">ເລກບັນຊີອາກອນ:</p>
+                                <h3 class="blue--text">123</h3>
+                              </div>
+
+                              <p style="margin-bottom: 4px">
+                                ຊື່ຫົວໜ່ວຍທຸລະກິດ:
+                              </p>
+                              <p class="blue--text">123</p>
+
+                              <p style="margin-bottom: 4px">ມື້ອອກໃບແຈ້ງ:</p>
+                              <p class="blue--text">123</p>
+
+                              <p style="margin-bottom: 4px">ຊື່ລູກຄ້າ:</p>
+                              <p class="blue--text">123</p>
+
+                              <p style="margin-bottom: 4px">ສະກຸນເງິນ:</p>
+                              <p class="blue--text">123</p>
+
+                              <p style="margin-bottom: 4px">ຈຳນວນເງິນ</p>
+                              <h3 class="blue--text">123 LAK</h3>
+                              <p style="margin-bottom: 4px">ມອບເຂົ້າບັນຊີ</p>
+                              <h3 class="blue--text">123 LAK</h3>
+                              <p style="margin-bottom: 4px">ຊື່ບັນຊີ</p>
+                              <h3 class="blue--text">123 LAK</h3>
+                              <br />
+                              <p style="margin-bottom: 4px">ເນື້ອໃນ:</p>
+                              <p class="blue--text">123</p>
+                            </v-container>
                         <v-layout justify-center="justify-center">
                           <v-flex class="text-md-center">
                             <v-row no-gutters>
@@ -290,7 +229,7 @@
                               <v-col md="8" xs="8"></v-col>
                               <v-col xs="2">
                                 <v-btn color="primary" @click="e1 = 3">
-                                  ດຳເນີນການຕໍ່
+                                  ຢືນຍັນນການຊຳລະ
                                   <v-icon>mdi-chevron-right</v-icon>
                                 </v-btn>
                               </v-col>
@@ -299,89 +238,6 @@
                         </v-layout>
                       </v-stepper-content>
                       <v-stepper-content step="3">
-                        <!-- <v-container>
-                          <v-img
-                            class="rounded-border"
-                            max-height="350px"
-                            max-width="100%"
-                            src="/bg.png"
-                          >
-                            <v-col>
-                              <v-layout justify-center align-center>
-                                <v-img
-                                  max-height="100"
-                                  max-width="100"
-                                  src="/done.png"
-                                ></v-img>
-                              </v-layout>
-                            </v-col>
-
-                            <v-container>
-                              <v-row no-gutters align="center">
-                                <v-col cols="12" sm="2" class="pa-2">
-                                  ເລກທີ່ ID EasyTax:
-                                </v-col>
-                                <v-col cols="12" sm="2" class="pa-2">
-                                  <h3><b>123</b></h3>
-                                </v-col>
-                                <v-col cols="12" sm="2" class="pa-2">
-                                  ເລກບັນຊີອາກອນ:
-                                </v-col>
-                                <v-col cols="12" sm="2" class="pa-2">
-                                  <h3><b>234</b></h3>
-                                </v-col>
-                                <v-col cols="12" sm="2" class="pa-2">
-                                  ຊື່ຫົວໜ່ວຍທຸລະກິດ:
-                                </v-col>
-                                <v-col cols="12" sm="2" class="pa-2">
-                                  <h3><b>Ex Company</b></h3>
-                                </v-col>
-                              </v-row>
-
-                              <v-row no-gutters align="center">
-                                <v-col cols="12" sm="2" class="pa-2">
-                                  ມື້ອອກໃບແຈ້ງ:
-                                </v-col>
-                                <v-col cols="12" sm="2" class="pa-2">
-                                  <h3><b>16-7-21</b></h3>
-                                </v-col>
-                                <v-col cols="12" sm="2" class="pa-2">
-                                  ສະກຸນເງິນ:
-                                </v-col>
-                                <v-col cols="12" sm="2" class="pa-2">
-                                  <h3><b>LAK</b></h3>
-                                </v-col>
-                                <v-col cols="12" sm="2" class="pa-2">
-                                  ຈຳນວນເງິນ:
-                                </v-col>
-                                <v-col cols="12" sm="2" class="pa-2">
-                                  <h3><b>25.000</b></h3>
-                                </v-col>
-                              </v-row>
-
-                              <v-row no-gutters align="center">
-                                <v-col cols="12" sm="2" class="pa-2">
-                                  ມອບເຂົ້າບັນຊີ:
-                                </v-col>
-                                <v-col cols="12" sm="2" class="pa-2">
-                                  <h3><b>1234567889</b></h3>
-                                </v-col>
-                                <v-col cols="12" sm="2" class="pa-2">
-                                  ຊື່ບັນຊີ:
-                                </v-col>
-                                <v-col cols="12" sm="2" class="pa-2">
-                                  <h3><b>Account 1</b></h3>
-                                </v-col>
-                                <v-col cols="12" sm="2" class="pa-2">
-                                  ເນື້ອໃນ:
-                                </v-col>
-                                <v-col cols="12" sm="2" class="pa-2">
-                                  <h3><b>ກຂຄງ</b></h3>
-                                </v-col>
-                              </v-row>
-                            </v-container>
-                          </v-img>
-                        </v-container> -->
                         <v-container>
                           <v-img
                             class="rounded-border"
