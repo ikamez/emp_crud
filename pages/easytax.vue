@@ -184,6 +184,7 @@
                                   </div>
                                 </v-col>
                               </v-row>
+                              <br/>
                               <div>
                                 <p style="margin-bottom: 4px">ເລກບັນຊີອາກອນ:</p>
                                 <h3 class="blue--text">123</h3>
@@ -204,11 +205,11 @@
                               <p class="blue--text">123</p>
 
                               <p style="margin-bottom: 4px">ຈຳນວນເງິນ</p>
-                              <h3 class="blue--text">123 LAK</h3>
+                              <h3 class="blue--text">123</h3>
                               <p style="margin-bottom: 4px">ມອບເຂົ້າບັນຊີ</p>
-                              <h3 class="blue--text">123 LAK</h3>
+                              <p class="blue--text">123</p>
                               <p style="margin-bottom: 4px">ຊື່ບັນຊີ</p>
-                              <h3 class="blue--text">123 LAK</h3>
+                              <p class="blue--text">123</p>
                               <br />
                               <p style="margin-bottom: 4px">ເນື້ອໃນ:</p>
                               <p class="blue--text">123</p>
@@ -270,6 +271,7 @@
                                   </div>
                                 </v-col>
                               </v-row>
+                              <br/>
                               <div>
                                 <p style="margin-bottom: 4px">ເລກບັນຊີອາກອນ:</p>
                                 <h3 class="blue--text">123</h3>
@@ -290,11 +292,11 @@
                               <p class="blue--text">123</p>
 
                               <p style="margin-bottom: 4px">ຈຳນວນເງິນ</p>
-                              <h3 class="blue--text">123 LAK</h3>
+                              <h3 class="blue--text">123</h3>
                               <p style="margin-bottom: 4px">ມອບເຂົ້າບັນຊີ</p>
-                              <h3 class="blue--text">123 LAK</h3>
+                              <p class="blue--text">123</p>
                               <p style="margin-bottom: 4px">ຊື່ບັນຊີ</p>
-                              <h3 class="blue--text">123 LAK</h3>
+                              <p class="blue--text">123</p>
                               <br />
                               <p style="margin-bottom: 4px">ເນື້ອໃນ:</p>
                               <p class="blue--text">123</p>

@@ -215,6 +215,7 @@
                               </div>
                             </v-col>
                           </v-row>
+                          <br/>
                           <div>
                             <p style="margin-bottom: 4px">ຊຳລະໃຫ້ບິນ:</p>
                             <h3 class="blue--text">123</h3>
@@ -298,6 +299,7 @@
                                   </div>
                                 </v-col>
                               </v-row>
+                              <br/>
                               <div>
                                 <p style="margin-bottom: 4px">ຊຳລະໃຫ້ບິນ:</p>
                                 <h3 class="blue--text">123</h3>
