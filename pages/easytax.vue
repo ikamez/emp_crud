@@ -328,7 +328,7 @@
                                 <v-btn
                                   color="red"
                                   class="ma-2 white--text"
-                                  @click="$router.push('/services')"
+                                  @click="$router.push('/billinfo')"
                                 >
                                   ປິດ
                                   <v-icon>mdi-close</v-icon>
