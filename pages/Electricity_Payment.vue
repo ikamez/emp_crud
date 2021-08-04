@@ -279,7 +279,7 @@
                                 <v-img
                                   max-height="100"
                                   max-width="100"
-                                  src="/done.png"
+                                  src="/success.png"
                                 ></v-img>
                               </v-layout>
                             </v-col>
@@ -331,6 +331,7 @@
                             <v-row no-gutters>
                               <v-col xs="2">
                                 <v-btn
+                                  onclick="window.print()"
                                   color="blue-grey"
                                   class="ma-2 white--text"
                                 >

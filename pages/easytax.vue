@@ -1,14 +1,22 @@
 <template>
   <div>
-    <v-system-bar height="50px" color="white" class="mb-3 mt-3">
-      <v-btn icon light to="/services">
-        <v-icon color="grey darken-2">mdi-arrow-left</v-icon>
-      </v-btn>
-      <span class="ml-4" style="color: black; font-size: 16pt"
-        >Services/EasyTax</span
-      >
-    </v-system-bar>
-    <v-divider />
+     <v-row>
+        <v-col cols="12" md="5" sm="2">
+          <v-btn
+            @click="$router.go(-1)"
+            class="mx-2"
+            fab
+            dark
+            small
+            color="primary"
+          >
+            <v-icon dark> mdi-arrow-left </v-icon>
+          </v-btn>
+        </v-col>
+        <v-col cols="12" md="6" sm="4">
+          <h3>EasyTax</h3>
+        </v-col>
+      </v-row>
     <v-container>
       <v-form ref="form" v-model="valid" lazy-validation>
         <v-row>
@@ -251,7 +259,7 @@
                                 <v-img
                                   max-height="100"
                                   max-width="100"
-                                  src="/done.png"
+                                  src="/success.png"
                                 ></v-img>
                               </v-layout>
                             </v-col>
