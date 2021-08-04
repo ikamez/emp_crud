@@ -193,6 +193,7 @@
 
 <script>
 export default {
+  middleware: 'auth',
   data() {
     return {
       page: 1,

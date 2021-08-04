@@ -27,18 +27,18 @@
                   <v-stepper v-model="e1">
                     <v-stepper-header>
                       <v-stepper-step :complete="e1 > 1" step="1">
-                        Step 1
+                        Electricity Payment
                       </v-stepper-step>
                       <v-divider></v-divider>
                       <v-stepper-step :complete="e1 > 2" step="2">
-                        Step 2
+                        Electricity Payment Detaiil
                       </v-stepper-step>
                       <v-divider></v-divider>
                       <v-stepper-step :complete="e1 > 3" step="3">
-                        Step 3
+                        Confirm
                       </v-stepper-step>
                       <v-divider></v-divider>
-                      <v-stepper-step step="4"> Step 4 </v-stepper-step>
+                      <v-stepper-step step="4"> Success </v-stepper-step>
                     </v-stepper-header>
                     <v-stepper-items>
                       <v-stepper-content step="1">
@@ -215,7 +215,7 @@
                               </div>
                             </v-col>
                           </v-row>
-                          <br/>
+                          <br />
                           <div>
                             <p style="margin-bottom: 4px">ຊຳລະໃຫ້ບິນ:</p>
                             <h3 class="blue--text">123</h3>
@@ -299,7 +299,7 @@
                                   </div>
                                 </v-col>
                               </v-row>
-                              <br/>
+                              <br />
                               <div>
                                 <p style="margin-bottom: 4px">ຊຳລະໃຫ້ບິນ:</p>
                                 <h3 class="blue--text">123</h3>
@@ -369,6 +369,7 @@
 
 <script>
 export default {
+  middleware: 'auth',
   data() {
     return {
       e1: 1,

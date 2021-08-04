@@ -1,7 +1,7 @@
 <template>
   <!-- navbar -->
   <nav>
-    <v-toolbar color="#1778f3" dark>
+    <v-toolbar color="primary" dark>
       <v-toolbar-title style="cursor: pointer" @click="$router.push('/')">
         Employee CRUD</v-toolbar-title
       >
@@ -16,8 +16,8 @@
         <v-btn text nuxt to="/districts"> ເມືອງ </v-btn>
         <v-divider vertical></v-divider>
         <v-btn text nuxt to="/villages"> ບ້ານ </v-btn>
-        <v-divider vertical></v-divider>
-        <v-btn text nuxt to="/report"> ລາຍງານ </v-btn>
+        <!-- <v-divider vertical></v-divider>
+        <v-btn text nuxt to="/report"> ລາຍງານ </v-btn> -->
       </v-toolbar-items>
     </v-toolbar>
   </nav>

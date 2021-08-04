@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>this is index</h1>
+    <h1 class="text-center">This is my first project with nuxt js and vuetify</h1>
    <!-- <v-system-bar height="50px" color="white" class="mb-3 mt-3">
       <v-btn icon light to="/">
         <v-icon color="grey darken-2">mdi-home</v-icon>
@@ -183,6 +183,7 @@
 
 <script>
 export default {
+  middleware: 'auth',
   data() {
     return {
       page: 1,

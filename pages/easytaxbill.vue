@@ -52,6 +52,7 @@
 
 <script>
 export default {
+  middleware: 'auth',
   layout: 'reportlayout',
   methods: {
     print() {

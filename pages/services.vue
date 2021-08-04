@@ -33,7 +33,7 @@
             class="rounded-card"
             max-width="200"
             style="cursor: pointer"
-            @click="$router.push('/Electricity_Payment')"
+            @click="$router.push('/electricity_payment')"
           >
             <v-list-item>
               <v-list-item-content>
@@ -83,7 +83,9 @@
 </template>
 
 <script>
-
+export default {
+  middleware: 'auth',
+}
 </script>
 
 <style scoped>

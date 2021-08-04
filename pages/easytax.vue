@@ -344,6 +344,7 @@
 
 <script>
 export default {
+  middleware: 'auth',
   data() {
     return {
       items: ['THB', 'USD', 'LAK'],
