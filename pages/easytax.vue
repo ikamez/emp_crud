@@ -14,7 +14,7 @@
           </v-btn>
         </v-col>
         <v-col cols="12" md="6" sm="4">
-          <h3>EasyTax</h3>
+          <h3>EasyTax Payment</h3>
         </v-col>
       </v-row>
     <v-container>

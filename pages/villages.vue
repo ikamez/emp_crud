@@ -1,7 +1,7 @@
 <template>
   <div>
-    <v-system-bar height="50px" color="white" class="mb-3 mt-3">
-      <v-btn icon light to="/">
+    <v-system-bar height="50px" color="rgba(0, 0, 0, 0.0)" class="mb-3 mt-3">
+      <v-btn icon light @click="$router.go(-1)">
         <v-icon color="grey darken-2">mdi-arrow-left</v-icon>
       </v-btn>
       <span class="ml-4" style="color: black; font-size: 16pt"
