@@ -1,19 +1,36 @@
 <template>
   <div>
-    <v-system-bar height="50px" color="rgba(0, 0, 0, 0.0)" class="mb-3 mt-3">
+    <!-- <v-system-bar height="50px" color="rgba(0, 0, 0, 0.0)" class="mb-3 mt-3">
       <v-btn icon light @click="$router.go(-1)">
         <v-icon color="grey darken-2">mdi-arrow-left</v-icon>
       </v-btn>
       <span class="ml-4" style="color: black; font-size: 16pt">/ເມືອງ</span>
     </v-system-bar>
-    <v-divider />
+    <v-divider /> -->
+     <v-row>
+      <v-col cols="12" md="5" sm="2">
+        <v-btn
+          @click="$router.go(-1)"
+          class="mx-2"
+          fab
+          dark
+          small
+          color="primary"
+        >
+          <v-icon dark> mdi-arrow-left </v-icon>
+        </v-btn>
+      </v-col>
+      <v-col cols="12" md="6" sm="4">
+        <h2>ເມືອງ</h2>
+      </v-col>
+    </v-row>
     <v-container>
       <v-form ref="form">
         <v-row class="mx-0">
           <v-col cols="12" sm="12" md="12" lg="12">
             <v-row justify="center">
               <v-col cols="12" sm="12" md="12" lg="8">
-                <v-card class="shadow-box">
+                <v-card class="rounded-lg">
                   <v-data-table
                     hide-default-footer
                     :headers="headers"
@@ -22,11 +39,13 @@
                     :items-per-page="10"
                     :page.sync="page"
                     @page-count="pageCount = $event"
-                    sort-by="dis_name"
                   >
+                    <template v-slot:[`item.index`]="{ item }">
+                      {{ district.indexOf(item) + 1 }}
+                    </template>
                     <template v-slot:top>
                       <v-toolbar flat color="white">
-                        <v-toolbar-title>ເມືອງ</v-toolbar-title>
+                        <v-toolbar-title>ຂໍ້ມູນເມືອງ</v-toolbar-title>
                         <v-spacer></v-spacer>
                         <v-text-field
                           v-model="search"
@@ -43,8 +62,9 @@
                         <v-dialog v-model="dialog" width="500">
                           <template v-slot:activator="{ on, attrs }">
                             <v-btn
+                              elevation="0"
                               dark
-                              color="#1778f3"
+                              color="primary"
                               v-bind="attrs"
                               fab
                               class="shadow-button-blue"
@@ -117,7 +137,7 @@
                                     width="100%"
                                     dark
                                     large
-                                    color="#1778f3"
+                                    color="primary"
                                     class="shadow-button-blue"
                                     @click="postData"
                                     >ບັນທຶກ
@@ -128,7 +148,7 @@
                                     width="100%"
                                     dark
                                     large
-                                    color="#1778f3"
+                                    color="primary"
                                     class="shadow-button-blue"
                                     @click="updateData"
                                     >ບັນທຶກ
@@ -153,24 +173,26 @@
                       <v-divider></v-divider>
                     </template>
                     <template v-slot:[`item.edit`]="{ item }">
+                      <v-btn fab dark small color="primary" elevation="0"> 
                       <v-icon
-                        color=""
+                        dark
                         small
-                        class="mr-2"
                         @click="editData(item)"
                       >
                         mdi-pencil
                       </v-icon>
+                      </v-btn>
                     </template>
                     <template v-slot:[`item.delete`]="{ item }">
+                      <v-btn fab dark small color="red" elevation="0"> 
                       <v-icon
-                        color=""
+                        dark
                         small
-                        class="mr-2"
                         @click="deleteData(item)"
                       >
                         mdi-delete
                       </v-icon>
+                      </v-btn>
                     </template>
                   </v-data-table>
                   <div class="text-center pt-2 pb-5">
@@ -179,6 +201,7 @@
                       prev-icon="mdi-menu-left"
                       next-icon="mdi-menu-right"
                       :length="pageCount"
+                      circle
                     />
                   </div>
                 </v-card>
@@ -193,7 +216,6 @@
 
 <script>
 export default {
-  middleware: 'auth',
   data() {
     return {
       page: 1,
@@ -204,11 +226,16 @@ export default {
       search: '',
       headers: [
         {
-          text: 'ລະຫັດ',
-          align: 'start',
+          text: 'ລຳດັບ',
+          value: 'index',
           sortable: true,
-          value: 'dis_id',
         },
+        // {
+        //   text: 'ລະຫັດ',
+        //   align: 'start',
+        //   sortable: true,
+        //   value: 'dis_id',
+        // },
         {
           text: 'ເມືອງ',
           align: 'start',
@@ -262,6 +289,12 @@ export default {
             this.districtData.dis_name = ''
             this.provinceData.pro_id = ''
             this.dialog = false
+            this.$swal({
+              title: 'ບັນທຶກຂໍ້ມູນສຳເລັດ',
+              type: 'success',
+              timer: 1500,
+              showConfirmButton: false,
+            })
             this.loadDistrict()
           })
         e.preventDefault()
@@ -307,25 +340,47 @@ export default {
           this.districtData.dis_name = ''
           this.provinceData.pro_id = ''
           this.dialog = false
+          this.$swal({
+            title: 'ແກ້ໄຂຂໍ້ມູນສຳເລັດ',
+            type: 'success',
+            timer: 1500,
+            showConfirmButton: false,
+          })
           this.loadProvinces()
           this.loadDistrict()
         })
     },
 
     deleteData(item) {
-      console.log('==============')
       console.log(item)
-      this.$axios
-        .$delete(
-          'http://10.0.10.122:8000/api/v1/districts/delete/' + item.dis_id
-        )
-        .then((response) => {
-          console.log(response)
-          this.loadDistrict()
-        })
-        .catch((error) => {
-          console.log(error)
-        })
+      this.$swal({
+        title: 'ຍືນຍັນການລົບຂໍ້ມູນ?',
+        type: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#03A9F4',
+        confirmButtonText: 'ຕົກລົງ',
+        cancelButtonText: 'ຍົກເລິກ',
+      }).then((result) => {
+        if (result.value) {
+          this.$axios
+            .$delete(
+              'http://10.0.10.122:8000/api/v1/districts/delete/' + item.dis_id
+            )
+            .then((response) => {
+              console.log(response)
+              this.$swal({
+                title: 'ລົບຂໍ້ມູນສຳເລັດ',
+                type: 'success',
+                timer: 1500,
+                showConfirmButton: false,
+              })
+              this.loadDistrict()
+            })
+            .catch((error) => {
+              console.log(error)
+            })
+        }
+      })
     },
   },
   mounted() {

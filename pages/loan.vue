@@ -1,14 +1,29 @@
 <template>
   <div>
-    <v-system-bar height="50px" color="rgba(0, 0, 0, 0.0)" class="mb-3 mt-3">
+    <!-- <v-system-bar height="50px" color="rgba(0, 0, 0, 0.0)" class="mb-3 mt-3">
       <v-btn icon light @click="$router.go(-1)">
         <v-icon color="grey darken-2">mdi-arrow-left</v-icon>
       </v-btn>
-      <span class="ml-4" style="color: black; font-size: 16pt"
-        >/ເງິນກູ້</span
-      >
+      <span class="ml-4" style="color: black; font-size: 16pt">/ເງິນກູ້</span>
     </v-system-bar>
-    <v-divider />
+    <v-divider /> -->
+     <v-row>
+      <v-col cols="12" md="5" sm="2">
+        <v-btn
+          @click="$router.go(-1)"
+          class="mx-2"
+          fab
+          dark
+          small
+          color="primary"
+        >
+          <v-icon dark> mdi-arrow-left </v-icon>
+        </v-btn>
+      </v-col>
+      <v-col cols="12" md="6" sm="4">
+        <h2>ເງິນກູ້</h2>
+      </v-col>
+    </v-row>
     <v-container>
       <v-form ref="form">
         <v-row class="mx-0">
@@ -24,11 +39,13 @@
                     :items-per-page="10"
                     :page.sync="page"
                     @page-count="pageCount = $event"
-                    sort-by="loan_id"
                   >
+                    <template v-slot:[`item.index`]="{ item }">
+                      {{ loans.indexOf(item) + 1 }}
+                    </template>
                     <template v-slot:top>
                       <v-toolbar flat color="white">
-                        <v-toolbar-title>ເງິນກູ້</v-toolbar-title>
+                        <v-toolbar-title>ຂໍ້ມູນເງິນກູ້</v-toolbar-title>
                         <v-spacer></v-spacer>
                         <v-text-field
                           v-model="search"
@@ -48,14 +65,14 @@
                     </template>
                     <template v-slot:[`item.detail`]="{ item }">
                       <v-btn
-                        color="#1778f3"
+                        color="primary"
                         dark
                         small
                         fab
                         class="mr-2"
                         @click="loandetail(item)"
                       >
-                        <v-icon> mdi-format-list-bulleted-square </v-icon>
+                        <v-icon> mdi-file-find </v-icon>
                       </v-btn>
                     </template>
                   </v-data-table>
@@ -79,7 +96,6 @@
 
 <script>
 export default {
-  middleware: 'auth',
   data() {
     return {
       page: 1,
@@ -87,6 +103,11 @@ export default {
       itemsPerPage: 10,
       search: '',
       headers: [
+        {
+          text: 'ລຳດັບ',
+          value: 'index',
+          sortable: true,
+        },
         {
           text: 'ລະຫັດພະນັກງານ',
           align: 'start',

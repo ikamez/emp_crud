@@ -14,7 +14,7 @@ export default {
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/icon.ico' }],
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/ldblogo.svg' }],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -39,34 +39,35 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    '@nuxtjs/auth',
+    // '@nuxtjs/auth',
+    'nuxt-sweetalert2',
   ],
-  auth: {
-    redirect: {
-      login: '/login'
-    },
-    strategies: {
-      local: {
-        endpoints: {
-          login: {
-            url: 'https://sakko-demo-api.herokuapp.com/api/v1/user/sign_in',
-            method: 'post',
-            propertyName: 'user.auth_jwt'
-          },
-          logout: {
-            url: 'https://sakko-demo-api.herokuapp.com/api/v1/user/sign_out',
-            method: 'delete'
-          },
-          user: {
-            url: 'https://sakko-demo-api.herokuapp.com/api/v1/user/me',
-            method: 'get',
-            propertyName: 'user'
-          },
-        },
-        tokenName: 'auth-token'
-      },
-    },
-  },
+  // auth: {
+  //   redirect: {
+  //     login: '/login'
+  //   },
+  //   strategies: {
+  //     local: {
+  //       endpoints: {
+  //         login: {
+  //           url: 'https://sakko-demo-api.herokuapp.com/api/v1/user/sign_in',
+  //           method: 'post',
+  //           propertyName: 'user.auth_jwt'
+  //         },
+  //         logout: {
+  //           url: 'https://sakko-demo-api.herokuapp.com/api/v1/user/sign_out',
+  //           method: 'delete'
+  //         },
+  //         user: {
+  //           url: 'https://sakko-demo-api.herokuapp.com/api/v1/user/me',
+  //           method: 'get',
+  //           propertyName: 'user'
+  //         },
+  //       },
+  //       tokenName: 'auth-token'
+  //     },
+  //   },
+  // },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
@@ -77,7 +78,7 @@ export default {
     theme: {
       themes: {
         light: {
-          primary: '#2196F3',
+          primary: '#03A9F4',
           secondary: '#69F0AE',
           accent: '#AB47BC',
           error: '#D32F2F',

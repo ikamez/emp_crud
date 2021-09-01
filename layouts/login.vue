@@ -1,5 +1,8 @@
 <template>
-  <v-app style="background: linear-gradient(90deg, rgba(134,195,209,1) 35%, rgba(34,89,233,1) 100%);">
+  <v-app style="
+      background-color: #0093e9;
+      background-image: linear-gradient(160deg, #0093e9 0%, #adfff5 100%);
+    ">
     <v-main>
       <v-container>
         <Nuxt />

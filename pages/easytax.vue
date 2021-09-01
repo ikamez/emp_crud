@@ -1,29 +1,29 @@
 <template>
   <div>
-     <v-row>
-        <v-col cols="12" md="5" sm="2">
-          <v-btn
-            @click="$router.go(-1)"
-            class="mx-2"
-            fab
-            dark
-            small
-            color="primary"
-          >
-            <v-icon dark> mdi-arrow-left </v-icon>
-          </v-btn>
-        </v-col>
-        <v-col cols="12" md="6" sm="4">
-          <h3>EasyTax Payment</h3>
-        </v-col>
-      </v-row>
+    <v-row>
+      <v-col cols="12" md="5" sm="2">
+        <v-btn
+          @click="$router.go(-1)"
+          class="mx-2"
+          fab
+          dark
+          small
+          color="primary"
+        >
+          <v-icon dark> mdi-arrow-left </v-icon>
+        </v-btn>
+      </v-col>
+      <v-col cols="12" md="6" sm="4">
+        <h2>EasyTax Payment</h2>
+      </v-col>
+    </v-row>
     <v-container>
-      <v-form ref="form" v-model="valid" lazy-validation>
+      <v-form ref="form">
         <v-row>
           <v-col>
             <v-row justify="center">
               <v-col>
-                <v-card class="rounded-border">
+                <v-card class="rounded-lg">
                   <v-stepper v-model="e1">
                     <v-stepper-header>
                       <v-stepper-step :complete="e1 > 1" step="1">
@@ -42,7 +42,6 @@
                         <v-row>
                           <v-col cols="12">
                             <v-select
-                              :rules="[(v) => !!v || 'ກະລຸນາເລືອກບັນຊີ']"
                               required
                               :items="items"
                               label="ເລືອກບັນຊີຕົ້ນທາງ"
@@ -55,7 +54,6 @@
                               outlined
                               append-icon="mdi-barcode-scan"
                               required
-                              :rules="eztaxRules"
                             ></v-text-field>
                           </v-col>
                           <v-col cols="12" md="2">
@@ -157,7 +155,6 @@
                                 label="ຈຳນວນເງິນ"
                                 outlined
                                 required
-                                :rules="payRules"
                               ></v-text-field>
                             </v-col>
                             <v-col>
@@ -167,7 +164,6 @@
                                 name="input-7-4"
                                 label="ເນື້ອໃນ"
                                 required
-                                :rules="detailRules"
                               ></v-textarea>
                             </v-col>
                           </v-card>
@@ -178,50 +174,39 @@
                       </v-stepper-content>
                       <v-stepper-content step="2">
                         <v-container>
-                              <div>
-                                <p>ເລກທີ່ ID EasyTax:</p>
+                          <div>
+                            <p>ບັນຊີຕົ້ນທາງ:</p>
+                          </div>
+                          <v-row>
+                            <v-col cols="12" md="6">
+                              <div class="border-ldb">
+                                <h3>
+                                  <span class="blue--text"> LAK </span>
+                                  123
+                                </h3>
+                                <h3>Mr. Test</h3>
                               </div>
-                              <v-row>
-                                <v-col cols="12" md="6">
-                                  <div class="border-ldb">
-                                    <h3>
-                                      <span class="blue--text"> LAK </span>
-                                      123
-                                    </h3>
-                                    <h3>Mr. Test</h3>
-                                  </div>
-                                </v-col>
-                              </v-row>
-                              <br/>
-                              <div>
-                                <p style="margin-bottom: 4px">ເລກບັນຊີອາກອນ:</p>
-                                <h3 class="blue--text">123</h3>
-                              </div>
+                            </v-col>
+                          </v-row>
+                          <br />
+                          <div>
+                            <p style="margin-bottom: 4px">ID Easytax:</p>
+                            <h3 class="blue--text">123</h3>
+                          </div>
 
-                              <p style="margin-bottom: 4px">
-                                ຊື່ຫົວໜ່ວຍທຸລະກິດ:
-                              </p>
-                              <p class="blue--text">123</p>
+                          <p style="margin-bottom: 4px">ຊື່ລູກຄ້າ:</p>
+                          <p class="blue--text">123</p>
 
-                              <p style="margin-bottom: 4px">ມື້ອອກໃບແຈ້ງ:</p>
-                              <p class="blue--text">123</p>
+                          <p style="margin-bottom: 4px">ຄ່າທຳນຽມ:</p>
+                          <p class="red--text">123</p>
 
-                              <p style="margin-bottom: 4px">ຊື່ລູກຄ້າ:</p>
-                              <p class="blue--text">123</p>
+                          <p style="margin-bottom: 4px">ຈຳນວນເງິນທັງຫມົດ</p>
+                          <h3 class="blue--text">123</h3>
 
-                              <p style="margin-bottom: 4px">ສະກຸນເງິນ:</p>
-                              <p class="blue--text">123</p>
-
-                              <p style="margin-bottom: 4px">ຈຳນວນເງິນ</p>
-                              <h3 class="blue--text">123</h3>
-                              <p style="margin-bottom: 4px">ມອບເຂົ້າບັນຊີ</p>
-                              <p class="blue--text">123</p>
-                              <p style="margin-bottom: 4px">ຊື່ບັນຊີ</p>
-                              <p class="blue--text">123</p>
-                              <br />
-                              <p style="margin-bottom: 4px">ເນື້ອໃນ:</p>
-                              <p class="blue--text">123</p>
-                            </v-container>
+                          <br />
+                          <p style="margin-bottom: 4px">ເນື້ອໃນ:</p>
+                          <p class="blue--text">123</p>
+                        </v-container>
                         <v-layout justify-center="justify-center">
                           <v-flex class="text-md-center">
                             <v-row no-gutters>
@@ -252,21 +237,21 @@
                             class="rounded-border"
                             max-height="100%"
                             max-width="100%"
-                            src="/bg.png"
+                            :src="require('~/assets/image/bg.png')"
                           >
                             <v-col>
                               <v-layout justify-center align-center>
                                 <v-img
                                   max-height="100"
                                   max-width="100"
-                                  src="/success.png"
+                                  :src="require('~/assets/image/success.png')"
                                 ></v-img>
                               </v-layout>
                             </v-col>
 
                             <v-container>
                               <div>
-                                <p>ເລກທີ່ ID EasyTax:</p>
+                                <p>ບັນຊີຕົ້ນທາງ:</p>
                               </div>
                               <v-row>
                                 <v-col cols="12" md="6">
@@ -279,32 +264,21 @@
                                   </div>
                                 </v-col>
                               </v-row>
-                              <br/>
+                              <br />
                               <div>
-                                <p style="margin-bottom: 4px">ເລກບັນຊີອາກອນ:</p>
+                                <p style="margin-bottom: 4px">ID Easytax:</p>
                                 <h3 class="blue--text">123</h3>
                               </div>
-
-                              <p style="margin-bottom: 4px">
-                                ຊື່ຫົວໜ່ວຍທຸລະກິດ:
-                              </p>
-                              <p class="blue--text">123</p>
-
-                              <p style="margin-bottom: 4px">ມື້ອອກໃບແຈ້ງ:</p>
-                              <p class="blue--text">123</p>
 
                               <p style="margin-bottom: 4px">ຊື່ລູກຄ້າ:</p>
                               <p class="blue--text">123</p>
 
-                              <p style="margin-bottom: 4px">ສະກຸນເງິນ:</p>
-                              <p class="blue--text">123</p>
+                              <p style="margin-bottom: 4px">ຄ່າທຳນຽມ:</p>
+                              <p class="red--text">123</p>
 
-                              <p style="margin-bottom: 4px">ຈຳນວນເງິນ</p>
+                              <p style="margin-bottom: 4px">ຈຳນວນເງິນທັງຫມົດ</p>
                               <h3 class="blue--text">123</h3>
-                              <p style="margin-bottom: 4px">ມອບເຂົ້າບັນຊີ</p>
-                              <p class="blue--text">123</p>
-                              <p style="margin-bottom: 4px">ຊື່ບັນຊີ</p>
-                              <p class="blue--text">123</p>
+
                               <br />
                               <p style="margin-bottom: 4px">ເນື້ອໃນ:</p>
                               <p class="blue--text">123</p>
@@ -352,17 +326,12 @@
 
 <script>
 export default {
-  middleware: 'auth',
   data() {
     return {
       items: ['THB', 'USD', 'LAK'],
-      valid: true,
       e1: 1,
       dialogm1: '',
       dialog: false,
-      payRules: [(v) => !!v || 'ກະລຸນາປ້ອນຈຳນວນເງິນ'],
-      detailRules: [(v) => !!v || 'ກະລຸນາປ້ອນເນື້ອໃນ'],
-      eztaxRules: [(v) => !!v || 'ກະລຸນາປ້ອນລະຫັດ EasyTax'],
       headers: [
         {
           text: 'ລາຍການ',
@@ -370,24 +339,17 @@ export default {
           sortable: false,
           value: 'item',
         },
-        { text: 'ເລກໃບແຈ້ງອາກອນ', value: 'no' },
-        { text: 'ຊື່ຫົວໜ່ວຍທຸລະກິດ', value: 'company' },
-        { text: 'ຈຳນວນເງິນ', value: 'amount' },
+        { text: 'ເລກໃບແຈ້ງອາກອນ', value: 'no', sortable: false },
+        { text: 'ຊື່ຫົວໜ່ວຍທຸລະກິດ', value: 'company', sortable: false },
+        { text: 'ຈຳນວນເງິນ', value: 'amount', sortable: false },
       ],
     }
   },
-  methods: {
-    validate() {
-      this.$refs.form.validate()
-    },
-  },
+  methods: {},
 }
 </script>
 
 <style scoped>
-.rounded-border {
-  border-radius: 20px;
-}
 .border-ldb {
   padding: 15px;
   border-style: solid;

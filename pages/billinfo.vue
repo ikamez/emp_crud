@@ -2,72 +2,92 @@
   <div>
     <v-container>
       <v-row>
-        <v-col sm="3">
+        <v-col cols="12" md="3" sm="3" xs="12">
           <v-card
-            class="rounded-card"
-            max-width="200"
+            max-width="200px"
+            class="rounded-lg mx-auto"
             style="cursor: pointer"
             @click="$router.push('/easytax')"
           >
             <v-list-item>
               <v-list-item-content>
                 <v-img
+                  style="margin-left: auto; margin-right: auto"
                   max-height="200"
                   max-width="200"
-                  src="/easytax.png"
+                  :src="require('~/assets/billinfo/easytax.png')"
                 ></v-img>
               </v-list-item-content>
             </v-list-item>
-            <v-col class="text-center mb-4"><h3>EasyTax Payment</h3></v-col>
+            <h3 class="text-center mb-4" style="padding-bottom: 10px">
+              EasyTax<br />Payment
+            </h3>
           </v-card>
         </v-col>
-        <v-col sm="3">
+        <v-col cols="12" md="3" sm="3" xs="12">
           <v-card
-            class="rounded-card"
-            max-width="200"
+            max-width="200px"
+            class="rounded-lg mx-auto"
             style="cursor: pointer"
             @click="$router.push('/electricity_payment')"
           >
             <v-list-item>
               <v-list-item-content>
                 <v-img
+                  style="margin-left: auto; margin-right: auto"
                   max-height="200"
                   max-width="200"
-                  src="/edl.png"
+                  :src="require('~/assets/billinfo/edl.png')"
                 ></v-img>
               </v-list-item-content>
             </v-list-item>
-            <v-col class="text-center mb-4"><h3>Electricity Payment</h3></v-col>
+            <h3 class="text-center mb-4" style="padding-bottom: 10px">
+              Electricity<br />Payment
+            </h3>
           </v-card>
         </v-col>
-        <v-col sm="3">
+        <v-col cols="12" md="3" sm="3" xs="12">
           <v-card
-            class="rounded-card"
-            max-width="200"
+            max-width="200px"
+            class="rounded-lg mx-auto"
             style="cursor: pointer"
-            @click="$router.push('/easytax')"
+            @click="dialog()"
           >
             <v-list-item>
               <v-list-item-content>
-                <v-img max-height="200" max-width="200" src="/tax.png"></v-img>
+                <v-img
+                  style="margin-left: auto; margin-right: auto"
+                  max-height="200"
+                  max-width="200"
+                  :src="require('~/assets/billinfo/npp.png')"
+                ></v-img>
               </v-list-item-content>
             </v-list-item>
-            <v-col class="text-center mb-4"><h3>Ex1</h3></v-col>
+            <h3 class="text-center mb-4" style="padding-bottom: 10px">
+              Water<br />Payment
+            </h3>
           </v-card>
         </v-col>
-        <v-col sm="3">
+        <v-col cols="12" md="3" sm="3" xs="12">
           <v-card
-            class="rounded-card"
-            max-width="200"
+            max-width="200px"
+            class="rounded-lg mx-auto"
             style="cursor: pointer"
-            @click="$router.push('/easytax')"
+            @click="dialog()"
           >
             <v-list-item>
               <v-list-item-content>
-                <v-img max-height="200" max-width="200" src="/money.png"></v-img>
+                <v-img
+                  style="margin-left: auto; margin-right: auto"
+                  max-height="200"
+                  max-width="200"
+                  :src="require('~/assets/billinfo/pakun.png')"
+                ></v-img>
               </v-list-item-content>
             </v-list-item>
-            <v-col class="text-center mb-4"><h3>Ex2</h3></v-col>
+            <h3 class="text-center mb-4" style="padding-bottom: 10px">
+              Social Security<br />Payment
+            </h3>
           </v-card>
         </v-col>
       </v-row>
@@ -77,14 +97,17 @@
 
 <script>
 export default {
-  middleware: 'auth',
+  data() {
+    return {}
+  },
+  methods: {
+    dialog() {
+      alert('ຢູ້ໃນຂັ້ນຕອນການພັດທະນາ')
+    },
+  },
 }
 </script>
 
 <style scoped>
-.rounded-card {
-  border-radius: 30px;
-  margin-left: auto;
-  margin-right: auto;
-}
+
 </style>

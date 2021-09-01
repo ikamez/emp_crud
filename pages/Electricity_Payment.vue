@@ -15,7 +15,7 @@
           </v-btn>
         </v-col>
         <v-col cols="12" md="6" sm="4">
-          <h3>Electricity Payment</h3>
+          <h2>Electricity Payment</h2>
         </v-col>
       </v-row>
       <v-form ref="form">
@@ -23,7 +23,7 @@
           <v-col>
             <v-row justify="center">
               <v-col>
-                <v-card class="rounded-border">
+                <v-card class="rounded-lg">
                   <v-stepper v-model="e1">
                     <v-stepper-header>
                       <v-stepper-step :complete="e1 > 1" step="1">
@@ -272,14 +272,14 @@
                             class="rounded-border"
                             max-height="100%"
                             max-width="100%"
-                            src="/bg.png"
+                            :src="require('~/assets/image/bg.png')"
                           >
                             <v-col>
                               <v-layout justify-center align-center>
                                 <v-img
                                   max-height="100"
                                   max-width="100"
-                                  src="/success.png"
+                                  :src="require('~/assets/image/success.png')"
                                 ></v-img>
                               </v-layout>
                             </v-col>
@@ -370,7 +370,6 @@
 
 <script>
 export default {
-  middleware: 'auth',
   data() {
     return {
       e1: 1,
@@ -393,9 +392,6 @@ export default {
 </script>
 
 <style scoped>
-.rounded-border {
-  border-radius: 20px;
-}
 .border-ldb {
   padding: 15px;
   border-style: solid;

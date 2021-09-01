@@ -2,6 +2,9 @@
     font-family: NotoSansLaoUI-Regular, Roboto-Regular ;
 }
 
+.swal2-container {
+    font-family: NotoSansLaoUI-Regular, Roboto-Regular ;
+}
 
 @font-face {
     font-family: "NotoSansLaoUI-Regular";
@@ -17,5 +20,6 @@
     font-family: "saysettha_ot";
     src: url(~assets/fonts/saysettha_ot.ttf) format("truetype");
 }
+
 
 
